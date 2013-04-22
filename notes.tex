@@ -61,6 +61,13 @@
 \makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Authors{Alexis Beingessner \\ Simon Pratt}
+\def\Title{Algorithms Notes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Header/footer
 % Mostly taken from: 
 %  https://texblog.wordpress.com/2007/11/07/headerfooter-in-latex-with-fancyhdr/
@@ -70,9 +77,9 @@
 \fancyhead{}             % clear header
 \fancyfoot{}
 
-\fancyhead[L]{Algorithms Notes}
+\fancyhead[L]{\Title}
 \fancyhead[C]{Page \thepage }
-\fancyhead[R]{Alexis Beingessner \\ Simon Pratt}
+\fancyhead[R]{\Authors}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Pretty math macros
@@ -84,9 +91,9 @@
 % Document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Algorithms Notes}
+\title{\Title}
 \date{}
-\author{Alexis Beingessner\\Simon Pratt}
+\author{\Authors}
 
 \begin{document}
 \maketitle
@@ -109,9 +116,10 @@
 \end{multicols}
 \part{Probablistic and Randomized Algorithms}
 \begin{multicols}{2}
-  \include{probability}
-  \include{amortization}
+  \include{probability}                 % done
   \include{random_select}
+  \include{amortization}
+  \include{splay_trees}
   \include{prob_approx}
 \end{multicols}
 \part{Appendices}

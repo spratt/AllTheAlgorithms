@@ -18,6 +18,7 @@ PARTS		= dfs \
 			  probability \
 			  amortization \
 			  random_select \
+			  splay_trees \
 			  prob_approx \
 			  license \
 			  acknowledgements
