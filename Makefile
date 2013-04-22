@@ -17,6 +17,7 @@ PARTS		= dfs \
 			  approximation \
 			  probability \
 			  amortization \
+			  random_select \
 			  prob_approx \
 			  license \
 			  acknowledgements
