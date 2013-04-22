@@ -5,3 +5,5 @@
 #
 notes.toc
 *.out
+*.bbl
+*.blg

@@ -36,12 +36,19 @@ FIGURES = heapTreeArray.pdf
 TEX     = pdflatex
 TEXOPTS = -halt-on-error
 
+BIBTEX  	= bibtex
+
 open: ${PDF}
 	open $< || gnome-open $<
 
 ${PDF}: ${MAIN_TEX} ${PARTS_TEX} ${FIGURES}
-	${TEX} ${TEXOPTS} $< 
-	${TEX} ${TEXOPTS} $<
+
+# should probably use a tool like rubber, but this works
+%.pdf:	%.tex
+	${TEX} ${TEXOPTS} $(basename $<) > /dev/null
+	${BIBTEX} $(basename $<) || ${TEX} ${TEXOPTS} $(basename $<) > /dev/null
+	${TEX} ${TEXOPTS} $(basename $<) > /dev/null
+	${TEX} ${TEXOPTS} $(basename $<) > /dev/null
 
 clean:
 	rm -f *.log *.aux *.dvi ${PDF}

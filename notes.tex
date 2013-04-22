@@ -23,6 +23,7 @@
 \usepackage{hyperref}
 \usepackage{algorithmic}
 \usepackage{multicol}
+\usepackage[nottoc]{tocbibind}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Extra stuff from John Howat
@@ -91,6 +92,7 @@
 % Document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\bibliographystyle{plain}
 \title{\Title}
 \date{}
 \author{\Authors}
@@ -129,4 +131,7 @@
   \include{acknowledgements}            % done
 \end{multicols}
   \include{license}                     % done
+
+\bibliography{references} % uncomment line to add references
+
 \end{document}
