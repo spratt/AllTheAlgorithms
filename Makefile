@@ -16,8 +16,9 @@ PARTS		= dfs \
 			  shortest_path \
 			  approximation \
 			  probability \
-			  amortization \
+			  records \
 			  random_select \
+			  amortization \
 			  splay_trees \
 			  prob_approx \
 			  license \

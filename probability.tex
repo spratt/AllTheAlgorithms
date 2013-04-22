@@ -48,6 +48,12 @@ disjunctive probability we get
 
 which is the \emph{linearity of independent probability}.
 
+\section{Random Variables}
+
+In analysis, we often use \emph{random variables} whose values are
+randomly determined, especially \emph{indicator random variables}
+whose values are either 0, or 1 and are similarly randomly determined.
+
 \section{Linearity of Expectation}
 
 Often, we are interested in the outcome of some event with intrinsic
@@ -75,6 +81,28 @@ If we have two events $X$ and $Y$, we have
 \end{center}
 
 which is the \emph{linearity of expectation}.
+
+\section{Example: Throwing N balls into M bins}
+
+If $N$ balls are each thrown randomly into $M$ bins, what is the
+expected number of balls in a given bin?
+
+First, define indicator random variables $I_i$ whose value is 1 only
+if ball $i$ lands in the given bin.  Since each ball has a
+$\frac{1}{M}$ chance of landing in the given bin, we have $E(I_i) =
+Pr(I_i = 1) = \frac{1}{M}$.
+
+The expected number of balls in the given bin is:
+
+\begin{align*}
+  %
+  E(X)
+  &= E \left( \sum_{i = 1}^N I_i \right) \\
+  &= \sum_{i = 1}^N E(I_i) \\
+  &= \sum_{i = 1}^N \frac{1}{M} \\
+  &= \frac{N}{M}
+  %
+\end{align*}
 
 \section{Markov's Inequality}
 
