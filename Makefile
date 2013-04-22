@@ -3,7 +3,6 @@
 ASSIGN		= notes
 
 PARTS		= dfs \
-			  fibonacci \
 			  graphs \
 			  heaps \
 			  integer_multiplication \
@@ -11,12 +10,14 @@ PARTS		= dfs \
 			  recurrences \
 			  selection \
 			  union_find \
-			  approximation \
 			  complexity_classes \
 			  dynamic_programming \
 			  np_complete \
 			  shortest_path \
+			  approximation \
 			  probability \
+			  amortization \
+			  prob_approx \
 			  license \
 			  acknowledgements
 
