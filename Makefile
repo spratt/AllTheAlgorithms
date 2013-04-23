@@ -19,6 +19,8 @@ PARTS		= dfs \
 			  records \
 			  random_select \
 			  random_linear \
+			  random_graphs \
+			  probabilistic_method \
 			  amortization \
 			  prob_approx \
 			  license \

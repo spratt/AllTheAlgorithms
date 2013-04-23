@@ -1,0 +1,22 @@
+\chapter{Graphs (revisited)}
+
+\section{Randomized Minimum Edge-Cut}
+
+Given an undirected graph $G = (V,E)$, a cut in $E$ is a subset $E'$
+of edges $E$ such tat if we remove $E'$ from $E$, we obtain a
+disconnected graph.  We are interested in the minimum cut.
+
+Given a graph $G = (V,E)$, we can perform \emph{edge contraction} by
+taking an edge $(u,v)$, remove the edge, replace both $u$ and $v$ with
+a single vertex $w$.  Any edges incident to $u$ or $v$ are now
+incident to $w$ instead.
+
+Note that any cut on a graph with a contracted edge is also a cut on
+the graph with the edge uncontracted.  It follows from this that we
+can contract random edges until we are left with two vertices, the
+edges incident to which will form a cut on the original graph.
+
+Note also that this may not return the min cut, but we may iterate
+several times to find the min cut with high probability.
+
+Historical note: this algorithm was developed by David Karger.

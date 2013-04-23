@@ -1,3 +1,16 @@
 \chapter{Randomized Linear Programming}
 
-This chapter will cover randomized linear programming.
+Given a set of constraints of the form
+
+\begin{align*}
+  %
+  a_1 x + b_1 y &\le c_1 \\
+  a_2 x + b_2 y &\le c_2 \\
+  &\ldots \\
+  a_2 x + b_2 y &\le c_2 \\
+  %
+\end{align*}
+
+Compute the maximum solution to $A x + B y$.
+
+This can be solved in $\BigOh{d!n}$ where $d$ is the dimension.
