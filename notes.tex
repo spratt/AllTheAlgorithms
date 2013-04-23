@@ -24,6 +24,7 @@
 \usepackage{algorithmic}
 \usepackage{multicol}
 \usepackage[nottoc]{tocbibind}
+\usepackage{dblfloatfix}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Extra stuff from John Howat
@@ -121,7 +122,7 @@
 \part{Probablistic and Randomized Algorithms}
 \begin{multicols}{2}
   \include{probability}                 % done
-  \include{records}
+  \include{records}                     % done
   \include{random_select}
   \include{amortization}
   \include{splay_trees}
@@ -129,11 +130,9 @@
 \end{multicols}
 
 \part{Appendices}
-\begin{multicols}{2}
   \appendix
   \include{acknowledgements}            % done
   \include{license}                     % done
-\end{multicols}
 
 \bibliography{references} % uncomment line to add references
 
