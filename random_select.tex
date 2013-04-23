@@ -1,3 +1,32 @@
 \chapter{Randomized Selection}
 
-This chapter will cover randomized QuickSelect.
+The QuickSelect algorithm is a randomized version of the selection
+algorithm covered in Chapter \ref{chapter:selection}.  Given an array
+of $n$ elements in arbitrary order, QuickSelect finds the $i$th
+element (where $i \le n$) in linear time.
+
+If there is only one element, return it.  Otherwise, randomly choose
+an element $x$ in the array and use this to partition the elements
+into those larger than the partition and those smaller.  If the final
+index of $x$ is greater than $i$, recurse on the elements smaller than
+$x$.  If the final index of $x$ is less than $i$, subtract the index
+of $x$ from $i$, and recurse on the elements larger than $x$.
+
+Intuitively, we expect to eliminate about half of the array at each
+level of recursion.
+
+Say that if $x$ falls within the first or last quarters of the sorted
+array, we don't remove any elements.  Otherwise, we remove half of the
+elements in the array.
+
+\begin{align*}
+  %
+  T(n)
+  &= \frac{T(n)}{2} + \frac{T \left( \frac{n}{2} \right)}{2} + \BigOh{n} \\
+  2 T(n) &= T(n) + T \left( \frac{n}{2} \right) + 2 \BigOh{n} \\
+  2 T(n) - T(n) &= T \left( \frac{n}{2} \right) + \BigOh{n} \\
+  T(n) &= T \left( \frac{n}{2} \right) + \BigOh{n} \\
+  %
+\end{align*}
+
+Which is $\BigOh{n}$ by the Master theorem.
