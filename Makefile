@@ -18,8 +18,8 @@ PARTS		= dfs \
 			  probability \
 			  records \
 			  random_select \
+			  random_linear \
 			  amortization \
-			  splay_trees \
 			  prob_approx \
 			  license \
 			  acknowledgements
